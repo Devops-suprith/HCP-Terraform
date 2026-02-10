@@ -1,0 +1,8 @@
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_security_group" "foreachtest" {
+  for_each = var.iam-user-names
+  name = each.value
+}

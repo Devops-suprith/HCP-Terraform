@@ -1,0 +1,6 @@
+data "aws_instance" "test_filter" {
+  filter {
+    name = "tag:Team"
+    values = ["Production"]
+  }
+}

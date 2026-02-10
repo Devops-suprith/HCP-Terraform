@@ -1,0 +1,3 @@
+terraform output -raw kube_config > kubeconfig
+$env:KUBECONFIG = "$PWD\kubeconfig"
+kubectl get nodes
